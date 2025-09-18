@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Daily Habit Tracker</title>
 </head>
 <body>
@@ -15,10 +17,10 @@
             <form class="habit-form" id="habitForm">
                 <input type="text" id="habitTitle" placeholder="Enter habit title" required>
                 <input type="text" id="habitCategory" placeholder="Enter category (optional)">
-                <button type="submit">Add Habit</button>
+                <button type="submit"><i class="fa fa-plus"></i> Add Habit</button>
             </form>
             <div class="summary">
-                <h2>Habit Summary</h2>
+                <h2><i class="fa fa-list-check"></i> Habit Summary</h2>
                 <ul class="habit-list" id="habitList"></ul>
             </div>
         </div>

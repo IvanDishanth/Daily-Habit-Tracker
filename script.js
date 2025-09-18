@@ -8,10 +8,13 @@ function renderHabits() {
         const habitItem = document.createElement('li');
         habitItem.className = 'habit-item';
         habitItem.innerHTML = `
-            <span>${habit.title} ${habit.category ? `(${habit.category})` : ''}</span>
+            <span>
+                <i class="fa ${habit.completed ? 'fa-circle-check' : 'fa-circle'}"></i>
+                ${habit.title} ${habit.category ? `<small style='color:#888;font-size:1rem;'>(${habit.category})</small>` : ''}
+            </span>
             <div>
                 <input type="checkbox" ${habit.completed ? 'checked' : ''} data-index="${index}">
-                <button data-index="${index}">Delete</button>
+                <button data-index="${index}"><i class="fa fa-trash"></i> Delete</button>
             </div>
         `;
         habitList.appendChild(habitItem);
